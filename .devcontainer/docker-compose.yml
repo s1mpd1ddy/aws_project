@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace:cached
+    environment:
+      - PYTHONPATH=/workspace
